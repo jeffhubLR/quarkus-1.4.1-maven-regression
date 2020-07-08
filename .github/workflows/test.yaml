@@ -1,3 +1,12 @@
+# This workflow validates that all Java changes:
+# * successfully compile
+# * successfully pass unit tests
+# * successfully package
+#
+# on Windows
+# The self-hosted runner is in LogRhythm's VMWare cluster in the datacenter
+#
+
 name: Test
 on:
   push:
