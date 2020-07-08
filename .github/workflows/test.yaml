@@ -7,7 +7,7 @@
 # The self-hosted runner is in LogRhythm's VMWare cluster in the datacenter
 #
 
-name: Test Again
+name: Java Continuous Integration - Windows
 on:
   push:
     branches:
@@ -17,6 +17,15 @@ on:
       - '**/*.java'
       - '**/*.proto'
   workflow_dispatch:
+
+  # Also trigger on pull requests when possible.
+  # current blockers are primarily runtime. The logic to restrict execution to only modified mvn modules
+  # doesn't work as-is on Windows
+#  pull_request:
+#    paths:
+#      - '**/pom.xml'
+#      - '**/*.java'
+#      - '**/*.proto'
 
 jobs:
   Test:
