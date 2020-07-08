@@ -7,7 +7,7 @@
 # The self-hosted runner is in LogRhythm's VMWare cluster in the datacenter
 #
 
-name: Test
+name: Test Again
 on:
   push:
     branches:
